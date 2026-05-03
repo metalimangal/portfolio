@@ -53,7 +53,7 @@ const PROJECTS = [
     category: "gamedev", year: "2021",
     tags: ["Unreal", "Blueprints", "VR", "Git"],
     description: "VR game raising awareness about forest destruction. VR programmer and source control manager in a collaborative team.",
-    image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
+    image: "", youtube: "https://www.youtube.com/watch?v=nFl_e_c8jNo", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
   },
   {
     title: "Unity Tutorial in VR",
