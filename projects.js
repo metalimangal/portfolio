@@ -39,7 +39,7 @@ const PROJECTS = [
     category: "gamedev", year: "2021",
     tags: ["Unreal", "C++", "Blueprints"],
     description: "Fast-paced ninja obstacle game on Unreal Engine. Players navigate increasingly difficult challenges using Blueprints-driven logic and C++ game systems.",
-    image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
+    image: "", youtube: "F7Q7UdHTpyU", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
   },
   {
     title: "Shroom Splicer",
@@ -100,7 +100,7 @@ const RESEARCH = [
     venue: "Purdue University — PhD Research (Ongoing)",
     tags: ["NeRF", "3D Gaussian Splatting", "Neural Rendering", "Real-Time Graphics", "XR", "HCI"],
     description: "PhD research exploring neural rendering techniques — including NeRF and 3D Gaussian Splatting — and their application to interactive and immersive environments. Investigating how neural scene representations can enable richer, more dynamic experiences in VR/AR contexts.",
-    pdfUrl: "", projectUrl: "", githubUrl: "", featured: true,
+    pdfUrl: "", projectUrl: "", githubUrl: "", youtube:"kQhiZ00p1sk", featured: true,
   },
   {
     title: "Gamification of VR Training — Effects of Visual Motivation",

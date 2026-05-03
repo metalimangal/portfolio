@@ -279,13 +279,27 @@
     .research-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
+      transition: border-color 0.25s, box-shadow 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .research-card-inner {
       padding: 28px 32px;
       display: grid;
       grid-template-columns: auto 1fr auto;
       gap: 24px;
       align-items: start;
-      transition: border-color 0.25s, box-shadow 0.25s;
-      position: relative; overflow: hidden;
+    }
+    .research-media {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg2);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .research-media iframe,
+    .research-media img {
+      width: 100%; height: 100%;
+      border: none; object-fit: cover;
     }
     .research-card::after {
       content: '';
@@ -790,7 +804,7 @@
       #hero { padding: 90px 20px 60px; }
       .hero-stats { display: none; }
       .page-section { padding: 64px 20px; }
-      .research-card { grid-template-columns: 1fr; }
+      .research-card-inner { grid-template-columns: 1fr; padding: 20px; }
       .research-year-col { display: flex; align-items: center; gap: 12px; }
       .research-links { flex-direction: row; }
       .projects-grid { grid-template-columns: 1fr; }
@@ -1312,6 +1326,14 @@ sorted.forEach((r, i) => {
   el.className = 'research-card fade-in' + (r.featured ? ' featured' : '');
   el.style.transitionDelay = `${i*0.06}s`;
 
+  // media — youtube or image
+  let media = '';
+  if (r.youtube) {
+    media = `<div class="research-media"><iframe src="https://www.youtube-nocookie.com/embed/${r.youtube}" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
+  } else if (r.image) {
+    media = `<div class="research-media"><img src="${r.image}" alt="${r.title}" loading="lazy"/></div>`;
+  }
+
   let links = '';
   if (r.pdfUrl)     links += `<a href="${r.pdfUrl}" target="_blank" class="research-link">⟶ PDF</a>`;
   if (r.projectUrl) links += `<a href="${r.projectUrl}" target="_blank" class="research-link">⟶ PROJECT</a>`;
@@ -1326,17 +1348,20 @@ sorted.forEach((r, i) => {
     'publication': 'PUBLICATION',
   };
   el.innerHTML = `
-    <div class="research-year-col">
-      <div class="research-year">${r.year}</div>
-      <div class="research-type-badge type-${r.type}">${TYPE_LABELS[r.type] || r.type.toUpperCase()}</div>
+    ${media}
+    <div class="research-card-inner">
+      <div class="research-year-col">
+        <div class="research-year">${r.year}</div>
+        <div class="research-type-badge type-${r.type}">${TYPE_LABELS[r.type] || r.type.toUpperCase()}</div>
+      </div>
+      <div class="research-body">
+        <div class="research-venue">${r.venue}</div>
+        <div class="research-title">${r.title}</div>
+        <div class="research-desc">${r.description}</div>
+        <div class="research-tags">${r.tags.map(t=>`<span class="research-tag">${t}</span>`).join('')}</div>
+      </div>
+      ${links ? `<div class="research-links">${links}</div>` : ''}
     </div>
-    <div class="research-body">
-      <div class="research-venue">${r.venue}</div>
-      <div class="research-title">${r.title}</div>
-      <div class="research-desc">${r.description}</div>
-      <div class="research-tags">${r.tags.map(t=>`<span class="research-tag">${t}</span>`).join('')}</div>
-    </div>
-    ${links ? `<div class="research-links">${links}</div>` : ''}
   `;
   researchGrid.appendChild(el);
 });
