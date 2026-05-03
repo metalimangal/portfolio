@@ -23,7 +23,7 @@ const PROJECTS = [
     category: "gamedev", year: "2022",
     tags: ["Unity", "C#", "Photon", "OpenVR", "Multiplayer"],
     description: "Led development of a multiplayer VR application where players socialize in themed amusement rooms. Responsible for full Photon networking implementation.",
-    image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: true,
+    image: "", youtube: "qIhUDlC40ws", playUrl: "", githubUrl: "", reportUrl: "", featured: true,
   },
   {
     title: "Space Shooter",
@@ -46,7 +46,7 @@ const PROJECTS = [
     category: "gamedev", year: "2022",
     tags: ["Unreal", "Blueprints", "PCG", "C++", "Datatables"],
     description: "Mushroom genetic algorithm game in Unreal. Led programming of procedural mushroom splicing mechanics, data table management, and Blueprint logic.",
-    image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
+    image: "", youtube: "cYZotpFrsi0", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
   },
   {
     title: "Flame in the Forest",
@@ -60,18 +60,9 @@ const PROJECTS = [
     category: "gamedev", year: "2021",
     tags: ["Unity", "C#", "Photon", "OpenVR"],
     description: "VR-based tutorial for Unity fundamentals, studying how people learn differently in immersive vs. flat-screen environments.",
-    image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
+    image: "", youtube: "80YegBtvXQ8", playUrl: "", githubUrl: "", reportUrl: "", featured: false,
   },
   // ── GRAPHICS ──────────────────────────────────────────────
-  {
-    title: "Texture Synthesis & Inpainting",
-    category: "graphics", year: "2024",
-    tags: ["Python", "OpenCV", "tkinter", "Computer Vision"],
-    description: "Implemented and compared 5 classical algorithms: Efros & Leung, Wei & Levoy, Image Quilting, Criminisi, and Telea. Built an interactive GUI with mask painting and threaded real-time execution.",
-    image: "", youtube: "", playUrl: "",
-    githubUrl: "",  // ← add your repo
-    reportUrl: "", featured: true,
-  },
   {
     title: "Neural Rendering Study",
     category: "graphics", year: "2024",
@@ -79,6 +70,28 @@ const PROJECTS = [
     description: "Technical deep-dive from rasterization and ray tracing through to NeRF and 3D Gaussian Splatting. Includes full LaTeX write-ups and mathematical derivations.",
     image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: true,
   },
+  {
+  title: "CGT 521 — Advanced Graphics Assignments",
+  category: "graphics", year: "2025",
+  tags: ["OpenGL", "GLSL", "C++", "Shaders", "Ray Tracing"],
+  description: "Collection of advanced computer graphics assignments from CGT 521 at Purdue, covering shaders, rendering techniques, and real-time graphics pipelines.",
+  image: "",
+  youtube: "",
+  playUrl: "",
+  githubUrl: "https://github.com/metalimangal/CGT-521-Spring-2025",
+  reportUrl: "", featured: true,
+},
+{
+  title: "SSAO Implementation",
+  category: "graphics", year: "2025",
+  tags: ["OpenGL", "GLSL", "C++", "Screen Space", "Ambient Occlusion"],
+  description: "Screen Space Ambient Occlusion implementation in OpenGL. Renders contact shadows and depth-based occlusion in real-time using a multi-pass pipeline.",
+  image: "",
+  youtube: "",
+  playUrl: "",
+  githubUrl: "https://github.com/metalimangal/SSAOImplementation",
+  reportUrl: "", featured: true,
+},
   // ← Add more graphics assignments here
 ];
 
@@ -109,16 +122,8 @@ const RESEARCH = [
     venue: "Purdue University — MS Thesis",
     tags: ["VR", "Unity", "User Study", "HCI", "Gamification", "Training"],
     description: "Investigated how game elements — points, progression, and visual motivation — affect VR training outcomes for micropipette usage in laboratory settings. Combined game design principles with controlled user studies.",
-    pdfUrl: "", projectUrl: "", githubUrl: "", featured: true,
-  },
-  {
-    title: "BIO-Spinach PE — Virtual Lab Simulation",
-    type: "simulation",
-    year: "2022",
-    venue: "Purdue Envision Center",
-    tags: ["Unity", "WebXR", "WebGL", "Lab Simulation", "Education"],
-    description: "Immersive browser-based virtual biology lab for student training, enabling safe and scalable remote lab practice without physical equipment.",
-    pdfUrl: "", projectUrl: "", githubUrl: "", featured: false,
+    pdfUrl: "",
+    youtube: "_MEKGal0zJE", projectUrl: "", githubUrl: "", featured: true,
   },
   {
     title: "Pipette Training VR Experience",
