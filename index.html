@@ -1361,7 +1361,7 @@ function renderProjects(cat) {
 
     let media = '';
     if (p.youtube) {
-      media = `<div class="card-media"><iframe src="https://www.youtube.com/embed/${p.youtube}" allowfullscreen loading="lazy"></iframe></div>`;
+      media = `<div class="card-media"><iframe src="https://www.youtube-nocookie.com/embed/${p.youtube}" allowfullscreen loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
     } else if (p.image) {
       media = `<div class="card-media"><img src="${p.image}" alt="${p.title}" loading="lazy"/></div>`;
     } else {
