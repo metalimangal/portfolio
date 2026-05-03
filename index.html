@@ -638,6 +638,20 @@
       100% { opacity: 0; transform: translateY(-52px) scale(0.85); }
     }
 
+    #hud-pull-btn {
+      background: linear-gradient(135deg, #9b5de5, #f72585);
+      border: none; cursor: pointer;
+      font-family: var(--font-mono); font-size: 0.62rem;
+      letter-spacing: 0.12em; color: #fff;
+      padding: 4px 10px; border-radius: 2px;
+      pointer-events: auto;
+      transition: all 0.2s; opacity: 0.4;
+    }
+    
+    #hud-pull-btn:not(:disabled) { opacity: 1; box-shadow: 0 0 10px rgba(247,37,133,0.4); }
+    #hud-pull-btn:not(:disabled):hover { transform: scale(1.06); box-shadow: 0 0 18px rgba(247,37,133,0.6); }
+    #hud-pull-btn:disabled { cursor: not-allowed; }
+
     /* ── FLOATING PULL CARD ── */
     .floating-pull-card {
       position: absolute; z-index: 300;
@@ -824,6 +838,7 @@
   <span id="coin-count">0</span>
   <span class="coin-label">COINS</span>
   <button id="hud-collection-btn" title="View Collection">📦</button>
+  <button id="hud-pull-btn" title="Pull Character (10 coins)">⟁ PULL</button>
 </div>
 
 <!-- GACHA MODAL -->
@@ -1490,13 +1505,23 @@ const heroCoinEl  = document.getElementById('hero-coin-display');
 const coinHud     = document.getElementById('coin-hud');
 const pullBtn     = document.getElementById('pull-btn');
 const gachaModal  = document.getElementById('gacha-modal');
+const hudPullBtn = document.getElementById('hud-pull-btn');
 
 // ── COIN UI UPDATE ──
 function updateCoinUI() {
   coinCountEl.textContent = coins;
   if (heroCoinEl) heroCoinEl.textContent = coins;
   pullBtn.disabled = coins < PULL_COST;
+  hudPullBtn.disabled = coins < PULL_COST;
 }
+
+hudPullBtn.addEventListener('click', () => {
+  if (coins < PULL_COST) return;
+  coins -= PULL_COST;
+  updateCoinUI();
+  const char = weightedPull();
+  spawnFloatingCard(char);
+});
 
 // ── FLOATING LABEL ──
 function floatLabel(text, x, y, color) {
