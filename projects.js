@@ -100,7 +100,7 @@ const RESEARCH = [
     venue: "Purdue University — PhD Research (Ongoing)",
     tags: ["NeRF", "3D Gaussian Splatting", "Neural Rendering", "Real-Time Graphics", "XR", "HCI"],
     description: "PhD research exploring neural rendering techniques — including NeRF and 3D Gaussian Splatting — and their application to interactive and immersive environments. Investigating how neural scene representations can enable richer, more dynamic experiences in VR/AR contexts.",
-    pdfUrl: "", projectUrl: "", githubUrl: "", youtube:"kQhiZ00p1sk", featured: true,
+    pdfUrl: "", projectUrl: "", githubUrl: "", featured: true,
   },
   {
     title: "Gamification of VR Training — Effects of Visual Motivation",
@@ -127,7 +127,7 @@ const RESEARCH = [
     venue: "Purdue University",
     tags: ["Unity", "VR", "Game Research", "Training", "User Study"],
     description: "Two-part VR training application for micropipette usage, combining game elements with guided tutorials to study learning effectiveness in immersive environments.",
-    pdfUrl: "", projectUrl: "", githubUrl: "", featured: false,
+    pdfUrl: "", projectUrl: "", youtube:"kQhiZ00p1sk", githubUrl: "", featured: false,
   },
 ];
 
