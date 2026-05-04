@@ -110,7 +110,7 @@ const RESEARCH = [
     title: "Neural Rendering for Interactive & Immersive Environments",
     type: "phd-research",
     year: "2026–",
-    venue: "Purdue University — PhD Research (Ongoing)",
+    venue: "Purdue University — PhD Research (Ongoing: Candidate)",
     tags: ["NeRF", "3D Gaussian Splatting", "Neural Rendering", "Real-Time Graphics", "XR", "HCI"],
     description: "PhD research exploring neural rendering techniques — including NeRF and 3D Gaussian Splatting — and their application to interactive and immersive environments. Investigating how neural scene representations can enable richer, more dynamic experiences in VR/AR contexts.",
     pdfUrl: "", projectUrl: "", githubUrl: "", featured: true,
