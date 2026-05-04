@@ -65,7 +65,7 @@ const PROJECTS = [
   // ── GRAPHICS ──────────────────────────────────────────────
   {
     title: "Neural Rendering Study",
-    category: "graphics", year: "2024",
+    category: "graphics", year: "2026",
     tags: ["NeRF", "3DGS", "Ray Tracing", "Rasterization", "LaTeX"],
     description: "Technical deep-dive from rasterization and ray tracing through to NeRF and 3D Gaussian Splatting. Includes full LaTeX write-ups and mathematical derivations.",
     image: "", youtube: "", playUrl: "", githubUrl: "", reportUrl: "", featured: true,
